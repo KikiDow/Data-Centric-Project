@@ -23,7 +23,7 @@ def hello():
 @app.route('/')
 @app.route('/get_categories/')
 def get_categories():
-    return render_template("categories.html", categories=mongo.db.categories.find())
+    return render_template("index.html", categories=mongo.db.categories.find())
 
 #Route to display the recipes in a single category.    
 @app.route('/display_category/<category_name>')
