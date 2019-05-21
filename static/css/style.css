@@ -1,0 +1,51 @@
+/*------------------------------------------------------Body------------------*/
+body {
+    background: url("../images/healthy-dish.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    overflow: hidden;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    /*
+    display: block;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    */
+}
+
+h3 {
+    color: red;
+}
+
+.white-background {
+    background-color: #E6E2E1;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card-space {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.center-button {
+    margin: 0 auto;
+}
+
+.task_header {
+    margin-top: 5px;
+    padding-left: 15px;
+}
+
+textarea {	
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    }
+    
+.button-spacing {
+    margin-bottom: 20px;
+}

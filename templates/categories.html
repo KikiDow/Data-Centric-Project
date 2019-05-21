@@ -1,0 +1,74 @@
+{% extends 'base.html' %} {% block content %}
+<!--
+This page extends "base.html" and is the "Home/Landing Page of the application. 
+It contains the "drill-down/Hot Keys" that allows the user to more quickly access
+the type of recipe they are looking for.
+-->
+
+<div class="row">
+    <!-- For each category, render a materialize CSS floating action button card element. -->
+    {% for category in categories %}
+    <div class="col s6 m4">
+        {% if category.category_name == 'Breakfast' %}
+        <div class="card card-space">
+            <div class="card-image">
+                <img src="{{url_for('static', filename='images/Breakfast.jpg')}}">
+                <!-- <img src="{{url_for('static', filename='images/%s.jpg')}}" % ('category.category_name')> -->
+                <span class="card-title">{{category.category_name}}</span>
+                <a href="{{ url_for('display_category', category_name=category.category_name) }}"class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+            </div>
+        </div>
+        {% elif category.category_name == 'Lunch' %}
+        <div class="card card-space">
+            <div class="card-image">
+                <img src="{{url_for('static', filename='images/Lunch.jpg')}}">
+                <!-- <img src="{{url_for('static', filename='images/%s.jpg')}}" % ('category.category_name')> -->
+                <span class="card-title">{{category.category_name}}</span>
+                <a href="{{ url_for('display_category', category_name=category.category_name) }}" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+            </div>
+        </div>
+        {% elif category.category_name == 'Starters' %}
+        <div class="card card-space">
+            <div class="card-image">
+                <img src="{{url_for('static', filename='images/Starters.jpg')}}">
+                <!-- <img src="{{url_for('static', filename='images/%s.jpg')}}" % ('category.category_name')> -->
+                <span class="card-title">{{category.category_name}}</span>
+                <a href="{{ url_for('display_category', category_name=category.category_name) }}" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+            </div>
+        </div>
+        {% elif category.category_name == 'Mains' %}
+        <div class="card card-space">
+            <div class="card-image">
+                <img src="{{url_for('static', filename='images/Mains.jpg')}}">
+                <!-- <img src="{{url_for('static', filename='images/%s.jpg')}}" % ('category.category_name')> -->
+                <span class="card-title">{{category.category_name}}</span>
+                <a href="{{ url_for('display_category', category_name=category.category_name) }}" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+            </div>
+        </div>
+        {% elif category.category_name == 'Desserts' %}
+        <div class="card card-space">
+            <div class="card-image">
+                <img src="{{url_for('static', filename='images/Desserts.jpg')}}">
+                <!-- <img src="{{url_for('static', filename='images/%s.jpg')}}" % ('category.category_name')> -->
+                <span class="card-title">{{category.category_name}}</span>
+                <a href="{{ url_for('display_category', category_name=category.category_name) }}" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+            </div>
+        </div>
+        {% elif category.category_name == 'Create Recipe' %}
+        <div class="card card-space">
+            <div class="card-image">
+                <img src="{{url_for('static', filename='images/Create Recipe.jpg')}}">
+                <!-- <img src="{{url_for('static', filename='images/%s.jpg')}}" % ('category.category_name')> -->
+                <span class="card-title">{{category.category_name}}</span>
+                <a href="{{ url_for('create_recipe') }}" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+<!-- Navigation button to bring the user to the search recipes form. -->
+<div class="row">
+    <a href="{{ url_for('search_recipes') }}" class="waves-effect waves-light btn-large red center-button"><i class="material-icons right">search</i>Search Recipes</a>
+</div>
+{% endblock %}

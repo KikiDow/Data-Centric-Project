@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+This page generates the applications basic template and design which is then extended by numberous 
+other pages of the application. It contains the nav bar element and inks to the various libraries and 
+packages used in the application.
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Links to libraries and packages included in te application. -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
+    <title>Recipe Test App</title>
+</head>
+<body>
+    <header>
+        <!-- Navigation Bar element. -->
+        <nav>
+            <div class="nav-wrapper red">
+                <a href="{{url_for('get_categories')}}" class="brand-logo">Recipe-App</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="{{url_for('get_categories')}}">Home</a></li>
+                    <li><a href="{{ url_for('create_recipe') }}">Create Recipe</a></li>
+                    <li><a href="{{ url_for('search_recipes') }}">Search Recipes</a></li>
+                    <li><a href="{{ url_for('manage_allergens') }}">Manage Allergens</a></li>
+                    <li><a href="{{ url_for('manage_cuisines') }}">Manage Cuisines</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="{{url_for('get_categories')}}">Home</a></li>
+                    <li><a href="{{ url_for('create_recipe') }}">Create Recipe</a></li>
+                    <li><a href="{{ url_for('search_recipes') }}">Search Recipes</a></li>
+                    <li><a href="{{ url_for('manage_allergens') }}">Manage Allergens</a></li>
+                    <li><a href="{{ url_for('manage_cuisines') }}">Manage Cuisines</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Jinja block for content/pages that will extend "base.html" -->
+    <div class="container white-background">
+        {% block content %} {% endblock %}
+    </div>
+    
+    <!-- Links to jQuery & Materialize CSS libraries. Javasrcipt document ready declaration. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.collapsible').collapsible();
+            $('select').material_select();
+            $(".button-collapse").sideNav();
+            $('.tooltipped').tooltip();
+        });
+    </script>
+</body>
+
+</html>

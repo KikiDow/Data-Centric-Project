@@ -1,0 +1,42 @@
+{% extends 'base.html' %} {% block content %}
+<!--
+This page extends "base.html" and displays the results of the user's search.
+-->
+<h2> Search Results </h2>
+<!-- If statement used to display variable content on the page. -->
+{% if no_of_results == 0 %}
+<!-- Inform the user of their search produced no results. -->
+<div class=row>
+    <div class="col s2"></div>
+    <div class="col s8">
+        <h3>Sorry, No results match your search.</h3>
+    </div>
+    <div class="col s2"></div>
+</div>
+{% elif no_of_results > 0 %}
+<!-- Display results of the search to the user in a table format. -->
+<table class="striped">
+    <thead>
+        <tr>
+            <th>Recipe</th>
+            <th>Allergens</th>
+            <th class="hide-on-small-only">Time</th>
+            <th>Likes</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for recipe in search_results %}
+        <tr>
+            <td> {{recipe.recipe_name}} </td>
+            <td> {{recipe.allergens}} </td>
+            <td class="hide-on-small-only"> {{recipe.cook}} mins </td>
+            <td> {{recipe.upvotes}} </td>
+            <!-- Navigation button to allow the user to view the recipe. -->
+            <td><a href="{{ url_for('display_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn red">Show Recipe</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endif %}
+{% endblock %}

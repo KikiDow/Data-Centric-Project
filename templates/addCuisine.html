@@ -1,0 +1,36 @@
+{% extends 'base.html' %} {% block content %}
+<!--
+This page extends "base.html" and generates a form that allows the user to create a new cuisine.
+-->
+<h2>Add Cuisine</h2>
+<div class="row">
+    <form action="{{ url_for('insert_cuisine') }}" method="POST" class="col s12">
+        <div class="row">
+            <div class="col s1"></div>
+            <!-- Text input field for new cuisine name -->
+            <div class="input-field col s10">
+                <i class="material-icons prefix">poll</i>
+                <input id="cuisine_name" name="cuisine_name" type="text" class="validate">
+                <label for="cuisine_name">Cuisine Name</label>
+            </div>
+            <div class="col s1"></div>
+        </div>
+        <div class="row">
+            <div class="col s1"></div>
+            <!-- Textarea input field for new cuisine description -->
+            <div class="input-field col s10">
+                <i class="material-icons prefix">subject</i>
+                <textarea name="cuisine_description" id="cuisine_description" class="materialize-textarea" required></textarea>
+                <label for="icon_telephone">Cuisine Description</label>
+            </div>
+            <div class="col s1"></div>
+        </div>
+        <!-- Submit button to insert new cuisine into database -->
+        <div class="row">
+            <button class="btn waves-effect waves-light red" type="submit" name="action">Add Cuisine
+            <i class="material-icons right">playlist_add</i>
+        </button>
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %} {% block content %}
+<!--
+This page extends "base.html" and allows the user to view all allergens and read information about them.
+-->
+<h2>Allergens</h2>
+<ul class="collapsible">
+  <!-- For each allergen, generate a collapsible tile containing name and description. -->
+  {% for allergen in allergens %}
+  <li>
+    <div class="collapsible-header">
+      <div class="col s2">
+        <i class="material-icons">expand_more</i>
+        <a href="{{ url_for('edit_allergen', allergen_id=allergen._id) }}" class="waves-effect waves-light btn btn_small red">Edit</a>
+      </div>
+      <div class="task_header col s9">
+        <strong>{{allergen.allergen_name}}</strong>
+      </div>
+    </div>
+    <div class="collapsible-body">
+      <span>
+              {{allergen.allergen_description}}
+          </span>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+<!-- Navigation Button to bring users to the create new allergen form -->
+<div class="row">
+    <span class="button-spacing">
+    <a href="{{ url_for('add_allergen') }}" class="waves-effect waves-light btn red"><i class="material-icons right">playlist_add</i>Add Allergen</a>
+    </span>
+</div>
+{% endblock %}

@@ -1,0 +1,121 @@
+{% extends 'base.html' %} {% block content %}
+<!--
+This page extends "base.html" and displays all the information relating to the chosen recipe
+to the user.
+-->
+<table class="striped">
+    <tbody>
+        <tr>
+            <td>
+                <div class="chip">
+                    Recipe Name
+                    <i class="close material-icons"></i>
+                </div>
+                {{ the_recipe.recipe_name }}
+            </td>
+            <td>
+                <div class="chip">
+                    Likes
+                    <i class="close material-icons"></i>
+                </div>
+                {{ the_recipe.upvotes }}
+            </td>
+            <td>
+                <div class="chip">
+                    Category
+                    <i class="close material-icons"></i>
+                </div>
+                {{ the_recipe.category }}
+            </td>
+            <td>
+                <div class="chip">
+                    Cuisine
+                    <i class="close material-icons"></i>
+                </div>
+                {{ the_recipe.cuisine }}
+            </td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td>
+                <div class="chip">
+                    Preparation
+                    <i class="close material-icons hide-on-small-only">timer</i>
+                </div>
+                {{ the_recipe.prep }} mins
+            </td>
+            <td>
+                <div class="chip">
+                    Cooking
+                    <i class="close material-icons hide-on-small-only">timer</i>
+                </div>
+                {{ the_recipe.cook }} mins
+            </td>
+            <td>
+                <div class="chip">
+                    Allergens
+                    <i class="close material-icons"></i>
+                </div>
+                {{ the_recipe.allergens }}
+            </td>
+            <td>
+                <div class="chip">
+                    Like
+                    <i class="close material-icons"></i>
+                </div>
+                <!-- Button to like the recipe. -->
+                <a href="{{ url_for('like_recipe', recipe_id=the_recipe._id) }}" class="btn-floating btn-large waves-effect waves-light red btn tooltipped"
+                    data-position="top" data-tooltip="Click here to Like this recipe"><i class="material-icons">done</i></a>
+            </td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td colspan="4">
+                <div class="chip">
+                    Ingredients
+                    <i class="close material-icons">list</i>
+                </div>
+                {{ the_recipe.ingredients }}
+            </td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td colspan="4">
+                <div class="chip">
+                    Instructions
+                    <i class="close material-icons">list</i>
+                </div>
+                <div>
+                    {{ the_recipe.instructions }}
+                </div>
+            </td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td>
+                <div class="chip">
+                    Author
+                    <i class="close material-icons">mode_edit</i>
+                </div>
+                {{ the_recipe.author }}
+            </td>
+            <td>
+                <div class="chip">
+                    Views
+                    <i class="close material-icons"></i>
+                </div>
+                {{ the_recipe.views }}
+            </td>
+            <td>
+                <!-- Navigation Button to bring users to the edit recipe form -->
+                <a href="{{ url_for('edit_recipe', recipe_id=the_recipe._id) }}" class="waves-effect waves-light btn red"><i class="material-icons left red hide-on-small-only">mode_edit</i>Edit Recipe</a>
+            </td>
+            <td>
+                <!-- Navigation Button to allow users to delete the recipe from the database. -->
+                <a href="{{ url_for('delete_recipe', recipe_id=the_recipe._id) }}" class="waves-effect waves-light btn red"><i class="material-icons left red hide-on-small-only">not_interested</i>Delete Recipe</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+{% endblock %}

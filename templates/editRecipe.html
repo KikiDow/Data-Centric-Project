@@ -1,0 +1,128 @@
+{% extends 'base.html' %} {% block content %}
+<!--
+This page extends "base.html" and renders the recipe edit form which allows the user
+to add or change information about the chosen recipe.
+-->
+<h3>Edit Recipe</h3>
+<!-- Form that allows the user to edit the required information/data of the selected recipe. -->
+<form action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" class="col s12">
+    <div class="row">
+        <div class="row">
+            <div class="col s1"></div>
+            <div class="input-field col s10">
+                <i class="material-icons prefix">assignment</i>
+                <input id="recipe_name" name="recipe_name" type="text" class="validate" value="{{ recipe.recipe_name }}" required>
+                <label for="icon_prefix">Recipe Name</label>
+            </div>
+            <div class="col s1"></div>
+        </div>
+        <div class="row">
+            <div class="col s1"></div>
+            <div class="input-field browser-default col s5">
+                <i class="material-icons prefix">poll</i>
+                <select id="category" name="category" required>
+                      <option value="" disabled>Choose Category</option>
+                      {% for cat in categories %}
+                            {% if cat.category_name == recipe.category %}
+                              <option value="{{cat.category_name}}" selected>{{cat.category_name}}</option>
+                            {% else %}
+                              <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+                            {% endif %}
+                      {% endfor %}
+                    </select>
+                <label>Recipe Category</label>
+            </div>
+            <div class="input-field browser-default col s5">
+                <i class="material-icons prefix">poll</i>
+                <select id="cuisine" name="cuisine" required>
+                      <option value="" disabled>Choose Cuisine</option>
+                      {% for cuisine in cuisines %}
+                            {% if cuisine.cuisine_name == recipe.cuisine %}
+                              <option value="{{cuisine.cuisine_name}}" selected>{{cuisine.cuisine_name}}</option>
+                             {% else %}
+                              <option value="{{cuisine.cuisine_name}}">{{cuisine.cuisine_name}}</option>
+                            {% endif %}  
+                      {% endfor %}
+                    </select>
+                <label>Cuisine</label>
+            </div>
+            <div class="col s1"></div>
+        </div>
+        <div class="row">
+            <div class="col s1"></div>
+            <div class="input-field browser-default col s10">
+                <i class="material-icons prefix">poll</i>
+                <select multiple id="allergens" name="allergens">
+                      <option value="" disabled>Choose Allergen(s)</option>
+                      {% for allergen in allergens %}
+                            {% if allergen.allergen_name in recipe_allergen_list %}
+                                <option value="{{allergen.allergen_name}}" selected>{{allergen.allergen_name}}</option>
+                            {% else %}
+                                <option value="{{allergen.allergen_name}}">{{allergen.allergen_name}}</option>
+                            {% endif %}
+                      {% endfor %}
+                    </select>
+                <label>Allergen</label>
+            </div>
+            <div class="col s1"></div>
+        </div>
+        <div class="row">
+            <div class="col s1"></div>
+            <div class="input-field col s10">
+                <i class="material-icons prefix">assignment</i>
+                <input id="ingredients" name="ingredients" type="text" class="validate" value="{{ recipe.ingredients }} " required>
+                <label for="icon_prefix">Ingredients</label>
+            </div>
+            <div class="col s1"></div>
+        </div>
+        <div class="row">
+            <div class="col s1"></div>
+            <div class="input-field col s10">
+                <i class="material-icons prefix">subject</i>
+                <textarea name="instructions" id="instructions" class="materialize-textarea" required>{{ recipe.instructions }}</textarea>
+                <label for="icon_telephone">Instructions</label>
+            </div>
+            <div class="col s1"></div>
+        </div>
+        <div class="row">
+            <div class="col s1"></div>
+            <div class="input-field col s3">
+                <i class="material-icons prefix hide-on-small-only">timer</i>
+                <input id="prep" name="prep" type="text" class="validate" value="{{ recipe.prep }}" required>
+                <label for="icon_prefix">Prep Time</label>
+            </div>
+            <div class="input-field col s3">
+                <i class="material-icons prefix hide-on-small-only">timer</i>
+                <input id="cook" name="cook" type="text" class="validate" value="{{ recipe.cook }}" required>
+                <label for="icon_prefix">Cooking Time</label>
+            </div>
+            <div class="input-field col s4">
+                <i class="material-icons prefix hide-on-small-only">edit</i>
+                <input id="author" name="author" type="text" class="validate" value="{{ recipe.author }}" required>
+                <label for="icon_prefix">Author</label>
+            </div>
+            <div class="col s1"></div>
+        </div>
+        <!-- Views and Upvotes input field hidden from user to current values of these fields of the recipe.  -->
+        <div class="row hide">
+            <div class="input-field col s4">
+                <i class="material-icons prefix">edit</i>
+                <input id="views" name="views" value="recipe.views" type="text" class="validate">
+                <label for="icon_prefix">Views</label>
+            </div>
+            <div class="input-field col s4">
+                <i class="material-icons prefix">edit</i>
+                <input id="upvotes" name="upvotes" value="recipe.upvotes" type="text" class="validate">
+                <label for="icon_prefix">Likes</label>
+            </div>
+        </div>
+        <!-- Submit button to update the information of the selected recipe in the database -->
+        <div class="row">
+            <button class="btn waves-effect waves-light red" type="submit" name="action">Edit Recipe
+                <i class="material-icons right red">playlist_add</i>
+            </button>
+        </div>
+    </div>
+</form>
+
+{% endblock %}
