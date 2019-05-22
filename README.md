@@ -105,6 +105,7 @@ to ensure it was producing the correct result. Similar testing was used on all c
 intended and expected results.
 
 ## Deployment
+* GitHub reposity for the project is located [here](https://github.com/KikiDow/Data-Centric-Project)
 
 ## Credits
 
