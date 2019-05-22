@@ -11,7 +11,7 @@ user has selected the related "Drill-down/Hot Key".
             <th>Recipe</th>
             <th>Allergens</th>
             <th class="hide-on-small-only">Time</th>
-            <th>Likes</th>
+            <th class="hide-on-small-only">Likes</th>
             <th></th>
         </tr>
     </thead>
@@ -21,7 +21,7 @@ user has selected the related "Drill-down/Hot Key".
             <td> {{recipe.recipe_name}} </td>
             <td> {{recipe.allergens}} </td>
             <td class="hide-on-small-only"> {{recipe.cook}} mins </td>
-            <td> {{recipe.upvotes}} </td>
+            <td class="hide-on-small-only"> {{recipe.upvotes}} </td>
             <!-- Navigation Button to bring users to a single recipe view page -->
             <td><a href="{{ url_for('display_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn red">Show Recipe</a></td>
         </tr>

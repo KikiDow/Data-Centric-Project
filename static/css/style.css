@@ -1,19 +1,12 @@
 /*------------------------------------------------------Body------------------*/
-body {
+html {
     background: url("../images/healthy-dish.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100%;
-    overflow: hidden;
+    min-height: 100%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    /*
-    display: block;
-    transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;
-    */
 }
 
 h3 {
