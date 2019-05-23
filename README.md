@@ -106,6 +106,7 @@ intended and expected results.
 
 ## Deployment
 * GitHub reposity for the project is located [here](https://github.com/KikiDow/Data-Centric-Project)
+* The application is deployed using Heroku [here](https://data-centric-project-kd.herokuapp.com/)
 
 ## Credits
 
