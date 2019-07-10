@@ -76,8 +76,10 @@ def insert_recipe():
     #Used in testing -- print(allergen_list_to_string)
     recipe_dict['allergens'] = allergen_list_to_string #Place created string into appropriate field in dictionary.
     #Used in testing -- print(recipe_dict['allergens'])
+    category_to_return_to_after_insertion = recipe_dict['category']
+    #Used in testing -- print(category_to_return_to_after_insertion)
     recipes.insert_one(recipe_dict) #Insert new recipe into collection.
-    return redirect(url_for('get_categories')) #Redirect to home page.
+    return redirect(url_for('display_category', category_name=category_to_return_to_after_insertion)) #Redirect to display_category page.
     
 #Route to provide delete recipe functionality in the application.
 @app.route('/delete_recipe/<recipe_id>')
