@@ -14,6 +14,7 @@ appropriate to focus on the required elements.
 
 
 ## GitHub & Heroku Repository
+* GitHub reposity for the project is located [here](https://github.com/KikiDow/Data-Centric-Project)
 
 
 ## Features
@@ -105,7 +106,6 @@ to ensure it was producing the correct result. Similar testing was used on all c
 intended and expected results.
 
 ## Deployment
-* GitHub reposity for the project is located [here](https://github.com/KikiDow/Data-Centric-Project)
 * The application is deployed using Heroku [here](https://data-centric-project-kd.herokuapp.com/)
 
 ## Credits
