@@ -126,7 +126,7 @@ def update_recipe(recipe_id):
         'views': rec_views, #Reset recipe views to same value prior to editing.
         'upvotes': rec_upvotes #Reset recipe upvotes to same value prior to editing.
     })
-    return redirect(url_for('get_categories'))
+    return redirect(url_for('display_recipe', recipe_id=ObjectId(recipe_id)))
     
 ######### Allergens ############################################################   
 #Route to render allergens page.
