@@ -118,9 +118,19 @@ to add or change information about the chosen recipe.
         </div>
         <!-- Submit button to update the information of the selected recipe in the database -->
         <div class="row">
-            <button class="btn waves-effect waves-light red" type="submit" name="action">Edit Recipe
+            <button data-target="modal4" class="modal-trigger btn waves-effect waves-light red">Make changes to Recipe
                 <i class="material-icons right red">playlist_add</i>
             </button>
+        </div>
+        <div id="modal4" class="modal">
+            <div class="modal-content">
+                <h4>Edit Recipe Information</h4>
+                <p>Are you sure you want to change the recipe information for {{ recipe.recipe_name }}?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-action modal-close btn waves-effect waves-light red" type="submit" name="action">Yes</button>
+                <a href="#!" class="modal-action modal-close waves-effect waves-light btn red">No</a>
+            </div>
         </div>
     </div>
 </form>
