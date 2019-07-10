@@ -84,8 +84,10 @@ def insert_recipe():
 #Route to provide delete recipe functionality in the application.
 @app.route('/delete_recipe/<recipe_id>')
 def delete_recipe(recipe_id):
+    recipe_for_deletion = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    category_to_return_to_after_deletion = recipe_for_deletion['category']
     mongo.db.recipes.remove({'_id': ObjectId(recipe_id)}) #Remove recipe with provided ID from the collection.
-    return redirect(url_for('get_categories'))
+    return redirect(url_for('display_category', category_name=category_to_return_to_after_deletion))
 
 #Route to render edit recipe form in the application with recipe information pre-loaded.    
 @app.route('/edit_recipe/<recipe_id>')
