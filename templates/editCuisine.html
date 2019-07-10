@@ -5,7 +5,7 @@ to add or change information about the chosen cuisine.
 -->
 <h2>Edit Cuisine</h2>
 <div class="row">
-     <!-- Form that allows the user to edit the required information/data of the selected cuisine. -->
+    <!-- Form that allows the user to edit the required information/data of the selected cuisine. -->
     <form action="{{ url_for('update_cuisine', cuisine_id=the_cuisine._id) }}" method="POST" class="col s12">
         <div class="row">
             <div class="col s1"></div>
@@ -27,9 +27,19 @@ to add or change information about the chosen cuisine.
         </div>
         <!-- Submit button to update the information of the selected allergen in the database -->
         <div class="row">
-            <button class="btn waves-effect waves-light red" type="submit" name="action">Edit Cuisine
+            <button data-target="modal3" class="modal-trigger btn waves-effect waves-light red">Make changes to Cuisine
             <i class="material-icons right">playlist_add</i>
         </button>
+        </div>
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <h4>Edit Cuisine Information</h4>
+                <p>Are you sure you want to change the {{ the_cuisine.cuisine_name }} cuisine information?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-action modal-close btn waves-effect waves-light red" type="submit" name="action">Yes</button>
+                <a href="#!" class="modal-action modal-close waves-effect waves-light btn red">No</a>
+            </div>
         </div>
     </form>
 </div>
