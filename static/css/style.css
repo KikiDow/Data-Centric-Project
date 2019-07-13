@@ -42,3 +42,7 @@ textarea {
 .button-spacing {
     margin-bottom: 20px;
 }
+
+.center-recipe {
+    margin: 0 auto;
+}
