@@ -7,11 +7,11 @@ to the user.
     <div class="row">
         <div class="col s1"></div>
         <div class="col s5">
-            <h4>Recipe Name:</h4>
+            <h4><b>Recipe Name:</b></h4>
             <p>{{ the_recipe.recipe_name }}</p>
         </div>
         <div class="col s5">
-            <h4>Views:</h4>
+            <h4><b>Views:</b></h4>
             <p>{{ the_recipe.views }}</p>
         </div>
         <div class="col s1"></div>
@@ -19,11 +19,11 @@ to the user.
     <div class="row">
         <div class="col s1"></div>
         <div class="col s5">
-            <h4>Category:</h4>
+            <h4><b>Category:</b></h4>
             <p>{{ the_recipe.category }}</p>
         </div>
         <div class="col s5">
-            <h4>Cuisine:</h4>
+            <h4><b>Cuisine:</b></h4>
             <p>{{ the_recipe.cuisine }}</p>
         </div>
         <div class="col s1"></div>
@@ -31,11 +31,11 @@ to the user.
     <div class="row">
         <div class="col s1"></div>
         <div class="col s5">
-            <h4>Preparation <span class="hide-on-small-only">Time</span>:</h4>
+            <h4><b>Preparation <span class="hide-on-small-only">Time</span>:</b></h4>
             <p>{{ the_recipe.prep }} mins</p>
         </div>
         <div class="col s5">
-            <h4>Cooking <span class="hide-on-small-only">Time</span>:</h4>
+            <h4><b>Cooking <span class="hide-on-small-only">Time</span>:</b></h4>
             <p>{{ the_recipe.cook }} mins</p>
         </div>
         <div class="col s1"></div>
@@ -43,19 +43,19 @@ to the user.
     <div class="row">
         <div class="col s1"></div>
         <div class="col s5">
-            <h4>Allergens:</h4>
+            <h4><b>Allergens:</b></h4>
             <p>{{ the_recipe.allergens }}</p>
         </div>
         <div class="col s5">
-            <h4 class="center-recipe">Likes:</h4>
-            <p class="center-recipe">{{ the_recipe.upvotes }}</p>
+            <h4><b>Likes:</b></h4>
+            <p>{{ the_recipe.upvotes }}</p>
         </div>
         <div class="col s1"></div>
     </div>
     <div class="row">
         <div class="col s1"></div>
         <div class="col s10">
-            <h4>Ingredients:</h4>
+            <h4><b>Ingredients:</b></h4>
             <p>{{ the_recipe.ingredients }}</p>
         </div>
         <div class="col s1"></div>
@@ -63,7 +63,7 @@ to the user.
     <div class="row">
         <div class="col s1"></div>
         <div class="col s10">
-            <h4>Instructions:</h4>
+            <h4><b>Instructions:</b></h4>
             <p>{{ the_recipe.instructions }}</p>
         </div>
         <div class="col s1"></div>
@@ -71,11 +71,11 @@ to the user.
     <div class="row">
         <div class="col s1"></div>
         <div class="col s5">
-            <h4>Author:</h4>
+            <h4><b>Author:</b></h4>
             <p>{{ the_recipe.author }}</p>
         </div>
         <div class="col s5">
-            <h4>Like:</h4>
+            <h4><b>Like:</b></h4>
             <a href="{{ url_for('like_recipe', recipe_id=the_recipe._id) }}" class="btn-floating btn-large waves-effect waves-light red btn tooltipped"
                     data-position="top" data-tooltip="Click here to Like this recipe"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
         </div>
