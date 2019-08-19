@@ -3,7 +3,7 @@
 This page extends "base.html" and renders the recipe search form which allows the user
 to search through all the recipes on the database based on the criteria they select.
 -->
-<h2>Search Recipes</h2>
+<h2 class="center-align">Search Recipes</h2>
 <!-- Form that allows the user to search all recipes based on the selected criteria/values. -->
 <form action="{{ url_for('search_results') }}" method="POST" class="col s12">
     <div class="row">
@@ -57,7 +57,7 @@ to search through all the recipes on the database based on the criteria they sel
     </div>
     <!-- Submit button to search for recipes in the database and navigate to the search results page. -->
     <div class="row">
-        <button class="btn waves-effect waves-light red" type="submit" name="action">Search for Recipes
+        <button class="btn waves-effect waves-light red playfair" type="submit" name="action">Search for Recipes
                     <i class="material-icons right red">search</i>
         </button>
     </div>

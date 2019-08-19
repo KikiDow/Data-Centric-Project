@@ -3,7 +3,7 @@
 This page extends "base.html" and renders the cuisine edit form which allows the user
 to add or change information about the chosen cuisine.
 -->
-<h2>Edit Cuisine</h2>
+<h2 class="center-align">Edit Cuisine</h2>
 <div class="row">
     <!-- Form that allows the user to edit the required information/data of the selected cuisine. -->
     <form action="{{ url_for('update_cuisine', cuisine_id=the_cuisine._id) }}" method="POST" class="col s12">
@@ -11,8 +11,8 @@ to add or change information about the chosen cuisine.
             <div class="col s1"></div>
             <div class="input-field col s10">
                 <i class="material-icons prefix">poll</i>
-                <input id="cuisine_name" name="cuisine_name" type="text" class="validate" value="{{the_cuisine.cuisine_name}}">
-                <label for="cuisine_name">Cuisine Name</label>
+                <input id="cuisine_name" name="cuisine_name" type="text" class="validate playfair" value="{{the_cuisine.cuisine_name}}">
+                <label for="cuisine_name" class="playfair">Cuisine Name</label>
             </div>
             <div class="col s1"></div>
         </div>
@@ -20,21 +20,21 @@ to add or change information about the chosen cuisine.
             <div class="col s1"></div>
             <div class="input-field col s10">
                 <i class="material-icons prefix">subject</i>
-                <textarea name="cuisine_description" id="cuisine_description" class="materialize-textarea">{{ the_cuisine.cuisine_description }}</textarea>
-                <label for="icon_telephone">Cuisine Description</label>
+                <textarea name="cuisine_description" id="cuisine_description" class="materialize-textarea playfair">{{ the_cuisine.cuisine_description }}</textarea>
+                <label for="icon_telephone" class="playfair">Cuisine Description</label>
             </div>
             <div class="col s1"></div>
         </div>
         <!-- Submit button to update the information of the selected allergen in the database -->
         <div class="row">
-            <button data-target="modal3" class="modal-trigger btn waves-effect waves-light red">Make changes to Cuisine
+            <button data-target="modal3" class="modal-trigger btn waves-effect waves-light red playfair">Make changes to Cuisine
             <i class="material-icons right">playlist_add</i>
         </button>
         </div>
         <div id="modal3" class="modal">
             <div class="modal-content">
-                <h4>Edit Cuisine Information</h4>
-                <p>Are you sure you want to change the {{ the_cuisine.cuisine_name }} cuisine information?</p>
+                <h4 class="playfair">Edit Cuisine Information</h4>
+                <p class="playfair">Are you sure you want to change the {{ the_cuisine.cuisine_name }} cuisine information?</p>
             </div>
             <div class="modal-footer">
                 <button class="modal-action modal-close btn waves-effect waves-light red" type="submit" name="action">Yes</button>

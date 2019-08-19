@@ -3,7 +3,7 @@
 This page extends "base.html" and renders the recipe edit form which allows the user
 to add or change information about the chosen recipe.
 -->
-<h3>Edit Recipe</h3>
+<h1>Edit Recipe</h1>
 <!-- Form that allows the user to edit the required information/data of the selected recipe. -->
 <form action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" class="col s12">
     <div class="row">

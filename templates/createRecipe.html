@@ -3,7 +3,7 @@
 This page extends "base.html" and contains the form to allow users to create a new recipe 
 and insert it into the database..
 -->
-<h2>Create Recipe</h2>
+<h2 class="center-align">Create Recipe</h2>
     <!-- Form that allows the user to enter the required information/data to create a new recipe. -->
     <form action="{{ url_for('insert_recipe') }}" method="POST" class="col s12">
         <div class="row">
@@ -116,7 +116,7 @@ and insert it into the database..
             </div>
             <!-- Submit button to insert the new recipe into the database.  -->
             <div class="row">
-                <button class="btn waves-effect waves-light red" type="submit" name="action">Add Recipe
+                <button class="btn waves-effect waves-light red playfair" type="submit" name="action">Add Recipe
                     <i class="material-icons right red">playlist_add</i>
                 </button>
             </div>
