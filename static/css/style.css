@@ -85,7 +85,7 @@ textarea {
 
 /*---------------------------------------------- Media Query -----------------*/
 @media only screen and (min-width: 768px) {
-		.active-heading {
-		    padding-left: 50px;
-		}
+	.active-heading {
+	    padding-left: 50px;
 	}
+}

@@ -68,7 +68,8 @@ the type of recipe they are looking for.
     {% endfor %}
 </div>
 <!-- Navigation button to bring the user to the search recipes form. -->
-<div class="row">
-    <a href="{{ url_for('search_recipes') }}" class="waves-effect waves-light btn-large red center-button playfair"><i class="material-icons right">search</i>Search Recipes</a>
+
+<div class="row center-align">
+    <a href="{{ url_for('search_recipes') }}" class="waves-effect waves-light btn-large red try-another-search playfair"><i class="material-icons right">search</i>Search Recipes</a>
 </div>
 {% endblock %}

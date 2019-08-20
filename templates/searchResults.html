@@ -10,7 +10,7 @@ This page extends "base.html" and displays the results of the user's search.
     <div class="row center-align">
         <img src="{{url_for('static', filename='images/no-results.jpg')}}" style="height:400px;width:80%;">
     </div>
-    <div class="row col s12 center-align">
+    <div class="row center-align">
         <a href="{{ url_for('search_recipes') }}" class="waves-effect waves-light btn-large red center-button playfair try-another-search"><i class="material-icons right">search</i>  Try Another Search</a>
     </div>
 </div>

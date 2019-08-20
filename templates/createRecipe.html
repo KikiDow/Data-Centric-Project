@@ -13,7 +13,7 @@ and insert it into the database..
                 <div class="input-field col s10">
                     <i class="material-icons prefix">assignment</i>
                     <input id="recipe_name" name="recipe_name" type="text" class="validate" required>
-                    <label for="icon_prefix">Recipe Name</label>
+                    <label for="icon_prefix" class="playfair">Recipe Name</label>
                 </div>
                 <div class="col s1"></div>
             </div>
@@ -22,24 +22,24 @@ and insert it into the database..
                 <!-- Select option field to allow the user to select the category of the recipe.  -->
                 <div class="input-field browser-default col s5">
                     <i class="material-icons prefix">poll</i>
-                    <select id="category" name="category" required>
+                    <select id="category" name="category" class="playfair" required>
                       <option value="" disabled selected>Choose Category</option>
                       {% for cat in categories %}
-                      <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+                      <option value="{{cat.category_name}}" class="playfair">{{cat.category_name}}</option>
                       {% endfor %}
                     </select>
-                    <label>Recipe Category</label>
+                    <label class="playfair">Recipe Category</label>
                 </div>
                 <!-- Select option field to allow the user to select the cuisine of the recipe.  -->
                 <div class="input-field browser-default col s5">
                     <i class="material-icons prefix">poll</i>
-                    <select id="cuisine" name="cuisine" required>
+                    <select id="cuisine" name="cuisine" class="playfair" required>
                       <option value="" disabled selected>Choose Cuisine</option>
                       {% for cuisine in cuisines %}
-                      <option value="{{cuisine.cuisine_name}}">{{cuisine.cuisine_name}}</option>
+                      <option value="{{cuisine.cuisine_name}}" class="playfair">{{cuisine.cuisine_name}}</option>
                       {% endfor %}
                     </select>
-                    <label>Cuisine</label>
+                    <label class="playfair">Cuisine</label>
                 </div>
                 <div class="col s1"></div>
             </div>
@@ -48,13 +48,13 @@ and insert it into the database..
                 <div class="col s1"></div>
                 <div class="input-field col s10">
                     <i class="material-icons prefix">poll</i>
-                    <select multiple id="allergens" name="allergens">
+                    <select multiple id="allergens" name="allergens" class="playfair">
                       <option value="" disabled>Choose Allergen(s)</option>
                       {% for allergen in allergens %}
-                      <option value="{{allergen.allergen_name}}">{{allergen.allergen_name}}</option>
+                      <option value="{{allergen.allergen_name}}" class="playfair">{{allergen.allergen_name}}</option>
                       {% endfor %}
                     </select>
-                    <label>Allergen</label>
+                    <label class="playfair">Allergen</label>
                 </div>
                 <div class="col s1"></div>
             </div>
@@ -64,7 +64,7 @@ and insert it into the database..
                 <div class="input-field col s10">
                     <i class="material-icons prefix">assignment</i>
                     <input id="ingredients" name="ingredients" type="text" class="validate" required>
-                    <label for="icon_prefix">Ingredients</label>
+                    <label for="icon_prefix" class="playfair">Ingredients</label>
                 </div>
                 <div class="col s1"></div>
             </div>
@@ -74,7 +74,7 @@ and insert it into the database..
                 <div class="input-field col s10">
                     <i class="material-icons prefix">subject</i>
                     <textarea name="instructions" id="instructions" class="materialize-textarea" required></textarea>
-                    <label for="icon_telephone">Instructions</label>
+                    <label for="icon_telephone" class="playfair">Instructions</label>
                 </div>
                 <div class="col s1"></div>
             </div>
@@ -84,19 +84,19 @@ and insert it into the database..
                 <div class="input-field col s3">
                     <i class="material-icons prefix hide-on-small-only">timer</i>
                     <input id="prep" name="prep" type="text" class="validate">
-                    <label for="icon_prefix">Prep</label>
+                    <label for="icon_prefix" class="playfair">Prep</label>
                 </div>
                 <!-- Text input field to allow the user to enter the cooking time of the recipe.  -->
                 <div class="input-field col s3">
                     <i class="material-icons prefix hide-on-small-only">timer</i>
                     <input id="cook" name="cook" type="text" class="validate">
-                    <label for="icon_prefix">Cooking</label>
+                    <label for="icon_prefix" class="playfair">Cooking</label>
                 </div>
                 <!-- Text input field to allow the user to enter the author of the recipe.  -->
                 <div class="input-field col s4">
                     <i class="material-icons prefix hide-on-small-only">edit</i>
                     <input id="author" name="author" type="text" class="validate" required>
-                    <label for="icon_prefix">Author</label>
+                    <label for="icon_prefix" class="playfair">Author</label>
                 </div>
                 <div class="col s1"></div>
             </div>
@@ -115,7 +115,7 @@ and insert it into the database..
                 </div>
             </div>
             <!-- Submit button to insert the new recipe into the database.  -->
-            <div class="row">
+            <div class="row center-align">
                 <button class="btn waves-effect waves-light red playfair" type="submit" name="action">Add Recipe
                     <i class="material-icons right red">playlist_add</i>
                 </button>
