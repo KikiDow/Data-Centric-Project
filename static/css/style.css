@@ -16,7 +16,7 @@ h2 {
     font-family: "Playfair Display", sans-serif;
     font-weight: 600;
     text-transform: uppercase;
-    padding-top: 10px;
+    margin-bottom: 40px;
 }
 
 p {
@@ -66,12 +66,15 @@ textarea {
     margin: 0 auto;
 }
 
+/*---------------------------------------------- Fonts -----------------------*/
+
 .playfair {
     font-family: "Playfair Display", sans-serif;
     font-weight: 200;
 }
 
-.crimson {
-    font-family: "Crimson Text", sans-serif;
-    font-weight: 200;
+.search-spacing {
+    margin-bottom: 40px;
+    padding-right: 40px;
 }
+

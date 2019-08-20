@@ -8,8 +8,8 @@ to search through all the recipes on the database based on the criteria they sel
 <form action="{{ url_for('search_results') }}" method="POST" class="col s12">
     <div class="row">
         <!-- Multiple select option input fields to allow the user to select various search criteria. -->
-        <div class="col s1"></div>
-        <div class="input-field browser-default col s5">
+        <!-- <div class="col s1"></div> -->
+        <div class="input-field browser-default col s12 m6 search-spacing">
             <i class="material-icons prefix">poll</i>
             <select multiple id="category" name="category" class="playfair">
                       <option value="" disabled selected><span class="hide-on-small-only">Choose</span> Categories</option>
@@ -19,7 +19,7 @@ to search through all the recipes on the database based on the criteria they sel
                     </select>
             <label class="playfair">Select Categories</label>
         </div>
-        <div class="input-field browser-default col s5">
+        <div class="input-field browser-default col s12 m6 search-spacing">
             <i class="material-icons prefix">poll</i>
             <select multiple id="cuisine" name="cuisine" class="playfair">
                       <option value="" disabled selected >Choose Cuisines</option>
@@ -29,11 +29,11 @@ to search through all the recipes on the database based on the criteria they sel
                     </select>
             <label class="playfair">Select Cuisines</label>
         </div>
-        <div class="col s1"></div>
-    </div>
-    <div class="row">
-        <div class="col s1"></div>
-        <div class="input-field browser-default col s5">
+        <!-- <div class="col s1"></div> -->
+    <!-- </div>
+    <div class="row"> -->
+        <!-- <div class="col s1"></div> -->
+        <div class="input-field browser-default col s12 m6 search-spacing">
             <i class="material-icons prefix">poll</i>
             <select multiple id="allergens" name="allergens" class="playfair">
                       <option value="" disabled selected >Choose Allergens</option>
@@ -43,7 +43,7 @@ to search through all the recipes on the database based on the criteria they sel
                     </select>
             <label class="playfair">Select Allergens</label>
         </div>
-        <div class="input-field browser-default col s5">
+        <div class="input-field browser-default col s12 m6 search-spacing">
             <i class="material-icons prefix">poll</i>
             <select multiple id="ingredients" name="ingredients" class="playfair">
                       <option value="" disabled selected >Choose Ingredients</option>
@@ -53,7 +53,7 @@ to search through all the recipes on the database based on the criteria they sel
                     </select>
             <label class="playfair">Select Ingredients</label>
         </div>
-        <div class="col s1"></div>
+        <!-- <div class="col s1"></div> -->
     </div>
     <!-- Submit button to search for recipes in the database and navigate to the search results page. -->
     <div class="row">
