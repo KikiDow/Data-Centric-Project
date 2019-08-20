@@ -11,8 +11,8 @@ to add or change information about the chosen recipe.
             <div class="col s1"></div>
             <div class="input-field col s10">
                 <i class="material-icons prefix">assignment</i>
-                <input id="recipe_name" name="recipe_name" type="text" class="validate" value="{{ recipe.recipe_name }}" required>
-                <label for="icon_prefix">Recipe Name</label>
+                <input id="recipe_name" name="recipe_name" type="text" class="validate playfair" value="{{ recipe.recipe_name }}" required>
+                <label for="icon_prefix" class="playfair">Recipe Name</label>
             </div>
             <div class="col s1"></div>
         </div>
@@ -20,7 +20,7 @@ to add or change information about the chosen recipe.
             <div class="col s1"></div>
             <div class="input-field browser-default col s5">
                 <i class="material-icons prefix">poll</i>
-                <select id="category" name="category" required>
+                <select id="category" name="category" class="playfair" required>
                       <option value="" disabled>Choose Category</option>
                       {% for cat in categories %}
                             {% if cat.category_name == recipe.category %}
@@ -30,11 +30,11 @@ to add or change information about the chosen recipe.
                             {% endif %}
                       {% endfor %}
                     </select>
-                <label>Recipe Category</label>
+                <label class="playfair">Recipe Category</label>
             </div>
             <div class="input-field browser-default col s5">
                 <i class="material-icons prefix">poll</i>
-                <select id="cuisine" name="cuisine" required>
+                <select id="cuisine" name="cuisine" class="playfair" required>
                       <option value="" disabled>Choose Cuisine</option>
                       {% for cuisine in cuisines %}
                             {% if cuisine.cuisine_name == recipe.cuisine %}
@@ -44,7 +44,7 @@ to add or change information about the chosen recipe.
                             {% endif %}  
                       {% endfor %}
                     </select>
-                <label>Cuisine</label>
+                <label class="playfair">Cuisine</label>
             </div>
             <div class="col s1"></div>
         </div>
@@ -52,7 +52,7 @@ to add or change information about the chosen recipe.
             <div class="col s1"></div>
             <div class="input-field browser-default col s10">
                 <i class="material-icons prefix">poll</i>
-                <select multiple id="allergens" name="allergens">
+                <select multiple id="allergens" name="allergens" class="playfair">
                       <option value="" disabled>Choose Allergen(s)</option>
                       {% for allergen in allergens %}
                             {% if allergen.allergen_name in recipe_allergen_list %}
@@ -62,7 +62,7 @@ to add or change information about the chosen recipe.
                             {% endif %}
                       {% endfor %}
                     </select>
-                <label>Allergen</label>
+                <label class="playfair">Allergen</label>
             </div>
             <div class="col s1"></div>
         </div>
@@ -70,8 +70,8 @@ to add or change information about the chosen recipe.
             <div class="col s1"></div>
             <div class="input-field col s10">
                 <i class="material-icons prefix">assignment</i>
-                <input id="ingredients" name="ingredients" type="text" class="validate" value="{{ recipe.ingredients }} " required>
-                <label for="icon_prefix">Ingredients</label>
+                <input id="ingredients" name="ingredients" type="text" class="validate playfair" value="{{ recipe.ingredients }} " required>
+                <label for="icon_prefix" class="playfair">Ingredients</label>
             </div>
             <div class="col s1"></div>
         </div>
@@ -79,8 +79,8 @@ to add or change information about the chosen recipe.
             <div class="col s1"></div>
             <div class="input-field col s10">
                 <i class="material-icons prefix">subject</i>
-                <textarea name="instructions" id="instructions" class="materialize-textarea" required>{{ recipe.instructions }}</textarea>
-                <label for="icon_telephone">Instructions</label>
+                <textarea name="instructions" id="instructions" class="materialize-textarea playfair" required>{{ recipe.instructions }}</textarea>
+                <label for="icon_telephone" class="playfair">Instructions</label>
             </div>
             <div class="col s1"></div>
         </div>
@@ -88,18 +88,18 @@ to add or change information about the chosen recipe.
             <div class="col s1"></div>
             <div class="input-field col s3">
                 <i class="material-icons prefix hide-on-small-only">timer</i>
-                <input id="prep" name="prep" type="text" class="validate" value="{{ recipe.prep }}" required>
-                <label for="icon_prefix">Prep Time</label>
+                <input id="prep" name="prep" type="text" class="validate playfair" value="{{ recipe.prep }}" required>
+                <label for="icon_prefix" class="playfair">Prep Time</label>
             </div>
             <div class="input-field col s3">
                 <i class="material-icons prefix hide-on-small-only">timer</i>
-                <input id="cook" name="cook" type="text" class="validate" value="{{ recipe.cook }}" required>
-                <label for="icon_prefix">Cooking Time</label>
+                <input id="cook" name="cook" type="text" class="validate playfair" value="{{ recipe.cook }}" required>
+                <label for="icon_prefix" class="playfair">Cooking Time</label>
             </div>
             <div class="input-field col s4">
                 <i class="material-icons prefix hide-on-small-only">edit</i>
-                <input id="author" name="author" type="text" class="validate" value="{{ recipe.author }}" required>
-                <label for="icon_prefix">Author</label>
+                <input id="author" name="author" type="text" class="validate playfair" value="{{ recipe.author }}" required>
+                <label for="icon_prefix" class="playfair">Author</label>
             </div>
             <div class="col s1"></div>
         </div>
@@ -118,18 +118,18 @@ to add or change information about the chosen recipe.
         </div>
         <!-- Submit button to update the information of the selected recipe in the database -->
         <div class="row">
-            <button data-target="modal4" class="modal-trigger btn waves-effect waves-light red">Make changes to Recipe
+            <button data-target="modal4" class="modal-trigger btn waves-effect waves-light red playfair">Make Changes
                 <i class="material-icons right red">playlist_add</i>
             </button>
         </div>
         <div id="modal4" class="modal">
             <div class="modal-content">
-                <h4>Edit Recipe Information</h4>
-                <p>Are you sure you want to change the recipe information for {{ recipe.recipe_name }}?</p>
+                <h4 class="playfair">Edit Recipe Information</h4>
+                <p class="playfair">Are you sure you want to change the recipe information for {{ recipe.recipe_name }}?</p>
             </div>
             <div class="modal-footer">
-                <button class="modal-action modal-close btn waves-effect waves-light red" type="submit" name="action">Yes</button>
-                <a href="#!" class="modal-action modal-close waves-effect waves-light btn red">No</a>
+                <button class="modal-action modal-close btn waves-effect waves-light red playfair" type="submit" name="action">Yes</button>
+                <a href="#!" class="modal-action modal-close waves-effect waves-light btn red playfair">No</a>
             </div>
         </div>
     </div>
