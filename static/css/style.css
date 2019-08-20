@@ -73,8 +73,13 @@ textarea {
     font-weight: 200;
 }
 
+/*---------------------------------------------- Spacing ---------------------*/
 .search-spacing {
     margin-bottom: 40px;
     padding-right: 40px;
+}
+
+.try-another-search {
+    margin-bottom: 20px;
 }
 
