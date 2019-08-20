@@ -15,6 +15,8 @@ h2 {
     color: red;
     font-family: "Playfair Display", sans-serif;
     font-weight: 600;
+    text-transform: uppercase;
+    padding-top: 10px;
 }
 
 p {
