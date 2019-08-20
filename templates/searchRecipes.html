@@ -11,23 +11,23 @@ to search through all the recipes on the database based on the criteria they sel
         <div class="col s1"></div>
         <div class="input-field browser-default col s5">
             <i class="material-icons prefix">poll</i>
-            <select multiple id="category" name="category">
+            <select multiple id="category" name="category" class="playfair">
                       <option value="" disabled selected><span class="hide-on-small-only">Choose</span> Categories</option>
                       {% for cat in categories %}
-                      <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+                      <option value="{{cat.category_name}}" class="playfair">{{cat.category_name}}</option>
                       {% endfor %}
                     </select>
-            <label>Select Categories</label>
+            <label class="playfair">Select Categories</label>
         </div>
         <div class="input-field browser-default col s5">
             <i class="material-icons prefix">poll</i>
-            <select multiple id="cuisine" name="cuisine">
-                      <option value="" disabled selected>Choose Cuisines</option>
+            <select multiple id="cuisine" name="cuisine" class="playfair">
+                      <option value="" disabled selected >Choose Cuisines</option>
                       {% for cuisine in cuisines %}
-                      <option value="{{cuisine.cuisine_name}}">{{cuisine.cuisine_name}}</option>
+                      <option value="{{cuisine.cuisine_name}}" class="playfair">{{cuisine.cuisine_name}}</option>
                       {% endfor %}
                     </select>
-            <label>Select Cuisines</label>
+            <label class="playfair">Select Cuisines</label>
         </div>
         <div class="col s1"></div>
     </div>
@@ -35,29 +35,29 @@ to search through all the recipes on the database based on the criteria they sel
         <div class="col s1"></div>
         <div class="input-field browser-default col s5">
             <i class="material-icons prefix">poll</i>
-            <select multiple id="allergens" name="allergens">
-                      <option value="" disabled selected>Choose Allergens</option>
+            <select multiple id="allergens" name="allergens" class="playfair">
+                      <option value="" disabled selected >Choose Allergens</option>
                       {% for allergen in allergens %}
-                      <option value="{{allergen.allergen_name}}">{{allergen.allergen_name}}</option>
+                      <option value="{{allergen.allergen_name}}" class="playfair">{{allergen.allergen_name}}</option>
                       {% endfor %}
                     </select>
-            <label>Select Allergens</label>
+            <label class="playfair">Select Allergens</label>
         </div>
         <div class="input-field browser-default col s5">
             <i class="material-icons prefix">poll</i>
-            <select multiple id="ingredients" name="ingredients">
-                      <option value="" disabled selected>Choose Ingredients</option>
+            <select multiple id="ingredients" name="ingredients" class="playfair">
+                      <option value="" disabled selected >Choose Ingredients</option>
                       {% for ingredient in ingredients %}
-                      <option value="{{ingredient}}">{{ingredient}}</option>
+                      <option value="{{ingredient}}" class="playfair">{{ingredient}}</option>
                       {% endfor %}
                     </select>
-            <label>Select Ingredients</label>
+            <label class="playfair">Select Ingredients</label>
         </div>
         <div class="col s1"></div>
     </div>
     <!-- Submit button to search for recipes in the database and navigate to the search results page. -->
     <div class="row">
-        <button class="btn waves-effect waves-light red playfair" type="submit" name="action">Search for Recipes
+        <button class="btn waves-effect waves-light red playfair" type="submit" name="action" class="playfair">Search for Recipes
                     <i class="material-icons right red">search</i>
         </button>
     </div>
