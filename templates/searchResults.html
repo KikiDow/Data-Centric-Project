@@ -16,6 +16,9 @@ This page extends "base.html" and displays the results of the user's search.
 </div>
 {% elif no_of_results > 0 %}
 <!-- Display results of the search to the user in a table format. -->
+<div class="row s12 center-align">
+    <h3 class="playfair">Number of Results: <strong>{{ no_of_results }}</strong></h3>
+</div>
 <table class="striped playfair">
     <thead>
         <tr>

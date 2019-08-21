@@ -17,6 +17,7 @@ h2 {
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 40px;
+    padding-top: 20px;
 }
 
 p {
@@ -84,7 +85,7 @@ textarea {
 }
 
 /*---------------------------------------------- Media Query -----------------*/
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
 	.active-heading {
 	    padding-left: 50px;
 	}

@@ -25,7 +25,7 @@ This page extends "base.html" and allows the user to view all cuisines and read 
   {% endfor %}
 </ul>
 <!-- Navigation Button to bring users to the create new cuisine form -->
-<div class="row">
-    <a href="{{ url_for('add_cuisine') }}" class="waves-effect waves-light btn red playfair"><i class="material-icons right">playlist_add</i>Add Cuisine</a>
+<div class="row center-align">
+    <a href="{{ url_for('add_cuisine') }}" class="waves-effect waves-light btn red playfair try-another-search"><i class="material-icons right">playlist_add</i>Add Cuisine</a>
 </div>
 {% endblock %}
