@@ -25,7 +25,7 @@ This page extends "base.html" and displays the results of the user's search.
             <th>Recipe</th>
             <th>Allergens</th>
             <th class="hide-on-small-only">Time</th>
-            <th>Likes</th>
+            <th class="hide-on-small-only">Likes</th>
             <th></th>
         </tr>
     </thead>
@@ -35,9 +35,9 @@ This page extends "base.html" and displays the results of the user's search.
             <td> {{recipe.recipe_name}} </td>
             <td> {{recipe.allergens}} </td>
             <td class="hide-on-small-only"> {{recipe.cook}} mins </td>
-            <td> {{recipe.upvotes}} </td>
+            <td class="hide-on-small-only"> {{recipe.upvotes}} </td>
             <!-- Navigation button to allow the user to view the recipe. -->
-            <td><a href="{{ url_for('display_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn red">Show Recipe</a></td>
+            <td><a href="{{ url_for('display_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn red"><i class="material-icons red hide-on-med-and-up">visibility</i><span class="hide-on-small-only">Show Recipe</span></a></td>
         </tr>
         {% endfor %}
     </tbody>

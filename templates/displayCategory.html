@@ -23,7 +23,7 @@ user has selected the related "Drill-down/Hot Key".
             <td class="hide-on-small-only"> {{recipe.cook}} mins </td>
             <td class="hide-on-small-only"> {{recipe.upvotes}} </td>
             <!-- Navigation Button to bring users to a single recipe view page -->
-            <td><a href="{{ url_for('display_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn red">Show Recipe</a></td>
+            <td><a href="{{ url_for('display_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn red"><i class="material-icons red hide-on-med-and-up">visibility</i><span class="hide-on-small-only">Show Recipe</span></a></td>
         </tr>
         {% endfor %}
     </tbody>
