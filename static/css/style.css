@@ -85,7 +85,7 @@ textarea {
 }
 
 /*---------------------------------------------- Media Query -----------------*/
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 993px) {
 	.active-heading {
 	    padding-left: 50px;
 	}
