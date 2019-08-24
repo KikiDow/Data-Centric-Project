@@ -5,17 +5,15 @@ Code Institute Full Stack Web Developer course. It is the milestone project for 
 Data Centric Development stream. The application follows the project brief and is developed using 
 HTML, CSS, Materialize CSS library, jQuery, Javascript, Python and a MongoDB Database.
 
+## DEMO
+* A live demo of the application can be found [here](https://data-centric-project-kd.herokuapp.com/)
+
 ## UX
 1. The application has attempted to meet all of the requirements laid out in the 
 assignment outline and design brief except one. The developer did not include a login 
 feature for the user as this was described as an optional feature in the
 project outline. This was due to time contraints on the student's part and felt it was more 
 appropriate to focus on the required elements.
-
-
-## GitHub & Heroku Repository
-* GitHub reposity for the project is located [here](https://github.com/KikiDow/Data-Centric-Project)
-
 
 ## Features
 * The application contains a **Navigation (Nav) Bar** which contains all the buttons required to
@@ -47,8 +45,14 @@ by selecting various fields/options to find a recipe(s) that matches their reque
 * The application contains both a **Manage Allergens** and **Manage Cuisines** page. These pages are 
 built using the same basic structure and are designed to allow the user to view, update and create 
 records in the database relating to the allergens and cuisines information.
-* The application also contains a **Pagination** feature when presenting results from the recipe
-searching features.
+
+## Features for Future Implementation
+* I would like to develop an User Authorisation & Authentication feature for this application. This would then allow for so many other features to be developed
+on this app. One of the main lead-ons would be the ability to control who may edit or delete recipes in the database.
+* I would like to develop a pagination element in the search results page and the recipe categories pages. 
+	- I wish to acknowledge that both of the above features were mentioned as "optional" requirements in the assignment brief. However, I felt it 
+	was not academically fair for students to be assessed on material that had not yet covered on the course.
+* I would also like to have developed a comments section to allow users to share ideas and experiences with the different recipes.
 
 ## Tecnologies Used
 - HTML
@@ -106,6 +110,26 @@ to ensure it was producing the correct result. Similar testing was used on all c
 intended and expected results.
 
 ## Deployment
+This project is deployed to Heroku using a MongoDB database.
+1. A new app was created on Heroku with a unique name.
+2. The following packages were installed in the local IDE (Cloud9):
+	- gunicorn
+	- psycopg2
+3. These packages were then passed to the requirements.txt file using the command: sudo pip3 freeze > requirements.txt
+4. The following config vars were then set on the settings panel on the heroku dashboard:
+	- IP - for the internet protocol address.
+	- PORT - for the port number to use.
+	- MONGO_URI - for the link to access the mongoDB database.
+5. The Procfile was then created in my IDE (Cloud9). This is used to inform Heroku what type of app it is about to recieve. Pushing to the 
+GitHub repo.
+6. The Heroku app was then connected to the matching GitHub repository using the utility on the deploy tab on the Heroku dashboard.
+7. The "Deploy Branch" option was then selected on Heroku to build the app and retrieve the Heroku address(url) of the app.
+8. The address(url) of the newly created app was then added to the list of ALLOWED_HOSTS in the settings.py file. Change comited and pushed to GitHub.
+9. The "Deploy Branch" option was selected again to re-build the app.
+10. App now fully deployed and ready for use on Heroku.
+
+
+* GitHub reposity for the project is located [here](https://github.com/KikiDow/Data-Centric-Project)
 * The application is deployed using Heroku [here](https://data-centric-project-kd.herokuapp.com/)
 
 ## Credits
